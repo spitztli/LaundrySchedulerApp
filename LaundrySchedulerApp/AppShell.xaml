@@ -7,10 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="LaundrySchedulerApp">
 
-    <!-- Definiere die MainPage als Startseite -->
-    <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
-
-    <!-- Definiere die SignUpPage -->
-    <ShellContent Title="Sign Up" ContentTemplate="{DataTemplate local:SignUpPage}" Route="SignUpPage"/>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
 </Shell>
