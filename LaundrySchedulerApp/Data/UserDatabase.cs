@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using System.Diagnostics;
 
 namespace LaundrySchedulerApp.Data
 {
@@ -6,10 +7,22 @@ namespace LaundrySchedulerApp.Data
     {
         private readonly SQLiteAsyncConnection _database;
 
-        public UserDatabase(string dbPath)
+        public UserDatabase()
         {
+            // Der path wird hier später angepasst damit es über einen Gehosteten Datenbank Server läuft 
+            var dbPath = @"C:\Users\samvo\source\repos\LaundrySchedulerApp\LaundrySchedulerApp\UserDatabase.db3";
             _database = new SQLiteAsyncConnection(dbPath);
+            Trace.WriteLine($"Datenbankpfad: {dbPath}");
             _database.CreateTableAsync<User>().Wait(); // Erstellt die Tabelle, wenn sie noch nicht existiert
+
+            if (File.Exists(dbPath))
+            {
+                Trace.WriteLine("Datenbankdatei wurde erfolgreich erstellt.");
+            }
+            else
+            {
+                Trace.WriteLine("Fehler: Datenbankdatei wurde nicht erstellt.");
+            }
         }
 
         public Task<int> SaveUserAsync(User user)

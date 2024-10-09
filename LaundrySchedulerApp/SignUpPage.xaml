@@ -15,27 +15,43 @@
             HorizontalOptions="Center" />
 
         <!-- Username -->
-        <Label Text="Benutzer Name"/>
         <Entry x:Name="usernameEntry"
-               Placeholder="Dein Vorname"/>
+               Placeholder="Benutzername"/>
 
         <!-- Email -->
-        <Label Text="E-Mail"/>
         <Entry x:Name="emailEntry"
-               Placeholder="Deine E-Mail"
+               Placeholder="E-Mail"
                Keyboard="Email"/>
         
         <!--Password-->
-        <Label Text="Passwort"/>
         <Entry x:Name="passwordEntry"
                Placeholder="Neues Passwort"/>
-        
+
+        <!--Password-->
+        <Entry x:Name="confirmPasswordEntry"
+               Placeholder="Passwort bestätigen"/>
 
         <!-- Senden Button -->
         <Button Text="Senden"
-                x:Name="SendButton"
-                BackgroundColor="LightBlue"
-                Clicked="OnSendButtonClicked"/>
-
+        x:Name="SendButton"
+        BackgroundColor="LightBlue"
+        Clicked="OnSendButtonClicked">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="LightBlue"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="DarkBlue"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
     </VerticalStackLayout>
 </ContentPage>

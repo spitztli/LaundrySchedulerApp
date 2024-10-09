@@ -10,7 +10,7 @@
 
         private async void OnLoginBtnClicked(object sender, EventArgs e)
         {
-            // Navigiere zur SignUpPage
+            // Navigiere zur Login Page
             await Navigation.PushAsync(new LoginPage());
         }
         private async void OnSignUpBtnClicked(object sender, EventArgs e)

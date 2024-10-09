@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SQLite;
-
-namespace LaundrySchedulerApp.Data
+﻿namespace LaundrySchedulerApp.Data
 {
     public class User
     {
