@@ -1,57 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LaundrySchedulerApp.SignUpPage"
-             Title="Sign Up">
-
-    <VerticalStackLayout
+             x:Class="LaundrySchedulerApp.SignUpPage">
+    
+<VerticalStackLayout
         Padding="20"
         Spacing="15"
         VerticalOptions="Center">
 
         <Label 
-            Text="Registrierung"
+            Text="Register"
             FontSize="24"
             HorizontalOptions="Center" />
 
-        <!-- Username -->
-        <Entry x:Name="usernameEntry"
-               Placeholder="Benutzername"/>
+        <Entry 
+            Style="{StaticResource Placeholder}"
+            x:Name="usernameEntry"
+            Placeholder="Username"/>
 
-        <!-- Email -->
-        <Entry x:Name="emailEntry"
-               Placeholder="E-Mail"
-               Keyboard="Email"/>
-        
-        <!--Password-->
-        <Entry x:Name="passwordEntry"
-               Placeholder="Neues Passwort"/>
+        <Entry 
+            Style="{StaticResource Placeholder}"
+            x:Name="emailEntry"
+            Placeholder="E-Mail"
+            Keyboard="Email"/>
 
-        <!--Password-->
-        <Entry x:Name="confirmPasswordEntry"
-               Placeholder="Passwort bestätigen"/>
+        <Entry
+            Style="{StaticResource Placeholder}"
+            x:Name="passwordEntry"
+            Placeholder="New Password"/>
 
-        <!-- Senden Button -->
-        <Button Text="Senden"
-        x:Name="SendButton"
-        BackgroundColor="LightBlue"
-        Clicked="OnSendButtonClicked">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroupList>
-                    <VisualStateGroup>
-                        <VisualState Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="LightBlue"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState Name="Pressed">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="DarkBlue"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </VisualStateManager.VisualStateGroups>
-        </Button>
+        <Entry 
+            Style="{StaticResource Placeholder}"
+            x:Name="confirmPasswordEntry"
+            Placeholder="Confirm password"/>
+
+
+        <Button
+            Style="{StaticResource ButtonLogSign}"
+            Text="Send"
+            x:Name="SendButton"
+            Clicked="OnSendButtonClicked" />
     </VerticalStackLayout>
 </ContentPage>

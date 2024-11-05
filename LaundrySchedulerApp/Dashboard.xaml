@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundrySchedulerApp.Dashboard"
+             Title="Dashboard">
+
+    <VerticalStackLayout>
+        <Label 
+            x:Name="welcomeLabel"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!-- Horizontal Layout for buttons to be side by side -->
+        <HorizontalStackLayout 
+            x:Name="buttonContainer"
+            HorizontalOptions="Center">
+            
+            <Button
+                Style="{StaticResource ButtonLogSign}"
+                x:Name="buttonOptions"
+                Text="Create a washing schedule"
+                Clicked="OnCreatBtnClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Style="{StaticResource ButtonLogSign}"
+                Text="Add washing plan"
+                HorizontalOptions="Center" />
+            
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

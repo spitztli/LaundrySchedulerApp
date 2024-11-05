@@ -423,4 +423,19 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
 
+    
+    <Style TargetType="Entry" x:Key="Placeholder">
+        <Setter Property="MaximumWidthRequest" Value="250" />
+        <Setter Property="MaximumHeightRequest" Value="50" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonLogSign">
+        <Setter Property="MaximumWidthRequest" Value="250" />
+        <Setter Property="MaximumHeightRequest" Value="50" />
+        <Setter Property="BackgroundColor" Value="#32a8a4" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    
+    
+
 </ResourceDictionary>

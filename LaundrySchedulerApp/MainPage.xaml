@@ -14,22 +14,23 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="Willkommen zu ihrem Waschplan"
+                Text="Laundry Scheduler"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Button
+                Style="{StaticResource ButtonLogSign}"
                 x:Name="LoginBtn"
-                Text="Login" 
+                Text="Sign In" 
                 Clicked="OnLoginBtnClicked"
                 HorizontalOptions="Center" />
 
             <Button
+                Style="{StaticResource ButtonLogSign}"
                 x:Name="SignUpBtn"
                 Text="Sign Up" 
                 Clicked="OnSignUpBtnClicked"
                 HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
